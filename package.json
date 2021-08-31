@@ -15,5 +15,23 @@
   "bugs": {
     "url": "https://github.com/JustinStoddard/sxpedia-api/issues"
   },
-  "homepage": "https://github.com/JustinStoddard/sxpedia-api#readme"
+  "homepage": "https://github.com/JustinStoddard/sxpedia-api#readme",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.13",
+    "chai": "^4.3.4",
+    "jest": "^27.1.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "apollo-server-express": "^3.3.0",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "gql-tag": "^1.0.1",
+    "graphql": "^15.5.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^2.0.4"
+  }
 }
