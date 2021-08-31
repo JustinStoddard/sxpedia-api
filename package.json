@@ -1,0 +1,19 @@
+{
+  "name": "sxpedia-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinStoddard/sxpedia-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinStoddard/sxpedia-api/issues"
+  },
+  "homepage": "https://github.com/JustinStoddard/sxpedia-api#readme"
+}
