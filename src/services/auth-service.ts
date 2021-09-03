@@ -13,7 +13,7 @@ export class AuthService {
   private jwk: JwksClient;
 
   constructor(
-    private oauthIssuer,
+    private oauthIssuer: string,
   ){
     const wellKnownEndpoint = new URL(oauthIssuer);
     wellKnownEndpoint.pathname = '/well-known/jwks.json';

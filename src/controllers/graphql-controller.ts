@@ -6,10 +6,10 @@ import {
 } from 'apollo-server-core';
 import { requestAuth } from '../middleware/auth-middleware';
 import graphqlSchema from '../resolvers/graphql-schema';
-import { getEnvVar } from '../helpers/getEnvVar';
+import { EnvVarArgs, getEnvVar } from '../helpers/getEnvVar';
 
 export const GraphQlController = async (router: Express) => {
-  const enviornment = getEnvVar('NODE_ENV');
+  const enviornment = getEnvVar(EnvVarArgs.NodeEnv);
   const schema = graphqlSchema();
 
   const server = new ApolloServer({
