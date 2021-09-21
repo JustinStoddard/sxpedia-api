@@ -1,4 +1,4 @@
-import { gql, ApolloServer } from 'apollo-server-express';
+import { ApolloServer } from 'apollo-server-express';
 import { Express } from 'express';
 import {
   ApolloServerPluginLandingPageGraphQLPlayground,

@@ -10,6 +10,11 @@ type Query {
 type Mutation {
   ping: Boolean!
 }
+
+type Launch {
+  id: Integer!
+  name: String!
+}
 `;
 
 export default () => makeExecutableSchema({
@@ -19,9 +24,10 @@ export default () => makeExecutableSchema({
   resolvers: {
     Query: {
       greeting: (_, _2, ctx: AuthContext) => `Hello, ${ctx.userId}!`,
+      launches: () => "Launches",
     },
     Mutation: {
       ping: () => true,
-    }
+    },
   },
 });

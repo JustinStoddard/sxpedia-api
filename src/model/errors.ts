@@ -16,7 +16,7 @@ export class AuthError extends AppError {
   constructor(
     message?: string,
   ){
-    super(ErrorType.AuthError);
+    super(ErrorType.AuthError, message);
   }
 };
 

@@ -16,19 +16,19 @@ export class AuthService {
     private oauthIssuer: string,
   ){
     const wellKnownEndpoint = new URL(oauthIssuer);
-    wellKnownEndpoint.pathname = '/well-known/jwks.json';
+    wellKnownEndpoint.pathname = '/.well-known/jwks.json';
     this.jwk = JWK({
       jwksUri: wellKnownEndpoint.toString(),
     });
   };
 
   async createAuth(token: string): Promise<AuthContext> {
-    const { iss, header } = JWT.decode(token, { complete: true }) as JwtToken;
+    const { payload, header } = JWT.decode(token, { complete: true }) as JwtToken;
     //Verifies we are able to be decoded
-    if (!iss) {
+    if (!payload.iss) {
       throw new AuthError("Issuer Missing");
     }
-    if (iss !== this.oauthIssuer) {
+    if (payload.iss !== this.oauthIssuer) {
       throw new AuthError("Issuer Not Trusted");
     }
     if (!header.kid) {
